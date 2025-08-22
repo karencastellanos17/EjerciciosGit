@@ -6,5 +6,8 @@ public class Main {
             System.out.println("HOLA MUNDO");
             System.out.println("KAREN JULIETH CASTELLANOS V");
             System.out.println("ESTUDIANTE");
+            System.out.println("ESTUDIANTE");
+            System.out.println("ESTUDIANTE");
+            System.out.println("ESTUDIANTE");
         }
     }
