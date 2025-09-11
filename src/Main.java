@@ -1,3 +1,4 @@
+//KAREN CASTELLANOS//
 import java.util.Random;
 import java.util.Scanner;
 
@@ -157,11 +158,11 @@ public class Main {
             if (avanza1 == 6) {
                 corredor1 = corredor1 - 2;
                 if (corredor1 < 0) corredor1 = 0;
-                System.out.println("eL corredor 1 saco el numero 6, le quito 2 pasos " + corredor1);
+                System.out.println("eL corredor 1 saco el numero 6, le quito 2 pasos: " + corredor1);
 
             } else if (avanza1 == 3) {
                 corredor1 = corredor1 + 3;
-                System.out.println("eL corredor 1 saco el numero 3, le agrego 3 pasos " + corredor1);
+                System.out.println("eL corredor 1 saco el numero 3, le agrego 3 pasos: " + corredor1);
 
             } else {
                 corredor1 = corredor1 + avanza1;
@@ -171,11 +172,11 @@ public class Main {
             if (avanza2 == 6) {
                 corredor2 = corredor2 - 2;
                 if (corredor1 < 0) corredor1 = 0;
-                System.out.println("el corredor 2 saco el numero 6, le quito 2 pasos " + corredor2);
+                System.out.println("el corredor 2 saco el numero 6, le quito 2 pasos: " + corredor2);
 
             } else if (avanza2 == 3) {
                 corredor2 = corredor2 + 3;
-                System.out.println("eL corredor 2 saco el numero 3, le agrego 3 pasos " + corredor2);
+                System.out.println("eL corredor 2 saco el numero 3, le agrego 3 pasos: " + corredor2);
             }
             System.out.println("-----------------------------------------------------------------------------");
 
