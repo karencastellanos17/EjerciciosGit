@@ -19,7 +19,7 @@ public class Main {
             System.out.println("2. Dados 3");
             System.out.println("3. IMC");
             System.out.println("4. Promedio de notas");
-            System.out.println("5. Ejercicio nuevo)");
+            System.out.println("5. Carrera 2 corredores");
             System.out.println("6. Salir");
             System.out.println(" ---------------------------");
             System.out.print("Elija la opcion que desea: ");
@@ -40,7 +40,7 @@ public class Main {
                     promedioNotas(scanner);
                     break;
                 case 5:
-                    System.out.println("Ejercicio nuevo");
+                    Carrera();
                     break;
                 case 6:
                     estado = false;
@@ -135,10 +135,55 @@ public class Main {
         System.out.print("Digite la quinta nota: ");
         nota5 = scanner.nextInt();
 
-        double promedio = (nota1 + nota2 + nota3 + nota4 + nota5) /5.0;
+        double promedio = (nota1 + nota2 + nota3 + nota4 + nota5) / 5.0;
 
         System.out.println("---------------------------------");
         System.out.println("El promedio es: " + promedio);
 
+    }
+
+    public static void Carrera() {
+        Random aleatorio = new Random();
+
+        int corredor1 = 0, corredor2 = 0, meta = 50;
+
+        while (corredor1 < meta && corredor2 < meta) {
+            int avanza1 = aleatorio.nextInt(6) + 1;
+            int avanza2 = aleatorio.nextInt(6) + 1;
+
+            corredor1 = corredor1 + avanza1;
+            corredor2 = corredor2 + avanza2;
+
+            if (avanza1 == 6) {
+                corredor1 = corredor1 - 2;
+                if (corredor1 < 0) corredor1 = 0;
+                System.out.println("eL corredor 1 saco el numero 6, le quito 2 pasos " + corredor1);
+
+            } else if (avanza1 == 3) {
+                corredor1 = corredor1 + 3;
+                System.out.println("eL corredor 1 saco el numero 3, le agrego 3 pasos " + corredor1);
+
+            } else {
+                corredor1 = corredor1 + avanza1;
+                System.out.println("corredor 1 avanza " + avanza1 + ":  " + corredor1);
+            }
+
+            if (avanza2 == 6) {
+                corredor2 = corredor2 - 2;
+                if (corredor1 < 0) corredor1 = 0;
+                System.out.println("el corredor 2 saco el numero 6, le quito 2 pasos " + corredor2);
+
+            } else if (avanza2 == 3) {
+                corredor2 = corredor2 + 3;
+                System.out.println("eL corredor 2 saco el numero 3, le agrego 3 pasos " + corredor2);
+            }
+            System.out.println("-----------------------------------------------------------------------------");
+
+            if (corredor1 >= meta) {
+                System.out.println("El corredor 1 gana esta carrera");
+            } else {
+                System.out.println("El corredor 2 gana esta carrera");
+            }
+        }
     }
 }
