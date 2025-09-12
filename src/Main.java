@@ -1,4 +1,6 @@
 //KAREN CASTELLANOS//
+//Corregi los pasos negativos, sin embargo el codigo anterior lo subi a tiempo//
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -140,7 +142,6 @@ public class Main {
 
         System.out.println("---------------------------------");
         System.out.println("El promedio es: " + promedio);
-
     }
 
     public static void Carrera() {
@@ -152,17 +153,13 @@ public class Main {
             int avanza1 = aleatorio.nextInt(6) + 1;
             int avanza2 = aleatorio.nextInt(6) + 1;
 
-            corredor1 = corredor1 + avanza1;
-            corredor2 = corredor2 + avanza2;
-
             if (avanza1 == 6) {
                 corredor1 = corredor1 - 2;
-                if (corredor1 < 0) corredor1 = 0;
-                System.out.println("eL corredor 1 saco el numero 6, le quito 2 pasos: " + corredor1);
+                System.out.println("eL corredor 1 saco el numero 6, le quito 2 pasos " + corredor1);
 
             } else if (avanza1 == 3) {
                 corredor1 = corredor1 + 3;
-                System.out.println("eL corredor 1 saco el numero 3, le agrego 3 pasos: " + corredor1);
+                System.out.println("eL corredor 1 saco el numero 3, le agrego 3 pasos " + corredor1);
 
             } else {
                 corredor1 = corredor1 + avanza1;
@@ -171,18 +168,21 @@ public class Main {
 
             if (avanza2 == 6) {
                 corredor2 = corredor2 - 2;
-                if (corredor1 < 0) corredor1 = 0;
-                System.out.println("el corredor 2 saco el numero 6, le quito 2 pasos: " + corredor2);
+                System.out.println("el corredor 2 saco el numero 6, le quito 2 pasos " + corredor2);
 
             } else if (avanza2 == 3) {
                 corredor2 = corredor2 + 3;
-                System.out.println("eL corredor 2 saco el numero 3, le agrego 3 pasos: " + corredor2);
+                System.out.println("eL corredor 2 saco el numero 3, le agrego 3 pasos " + corredor2);
+            } else {
+                corredor2 = corredor2 + avanza2;
+                System.out.println("corredor 2 avanza " + avanza2 + ":  " + corredor2);
             }
+
             System.out.println("-----------------------------------------------------------------------------");
 
             if (corredor1 >= meta) {
                 System.out.println("El corredor 1 gana esta carrera");
-            } else {
+            } else if (corredor2 >= meta) {
                 System.out.println("El corredor 2 gana esta carrera");
             }
         }
